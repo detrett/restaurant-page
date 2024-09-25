@@ -1,0 +1,202 @@
+/* Reset */
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Variables */
+:root {
+  --purple-10: #1A1423;
+  --gray-10: #f2f2f4;
+  --orange-80: #D16919;
+  --orange-90: #e8511a;
+  --orange-100: #ff6f00;
+}
+
+
+/* Fonts */
+
+@font-face {
+  font-family: Kalam;
+  src: url(./fonts/Kalam-Regular.ttf);
+}
+
+@font-face {
+  font-family: PermanentMarker;
+  src: url(./fonts/PermanentMarker-Regular.ttf);
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url(./fonts/Raleway-Regular.ttf);
+}
+
+/* Styles */
+
+body {
+  background-color: var(--purple-10);
+  font-family: 'Raleway';
+}
+
+header {
+  background: linear-gradient(0deg, rgba(26, 20, 35, 1) 0%, rgba(64, 48, 83, 0.768) 100%);
+}
+
+nav {
+  width: fit-content;
+  padding: 20px 0px;
+  margin: auto;
+  margin-block-end: 50px;
+
+  & ul {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+
+    & button {
+      background-color: transparent;
+      padding: 8px 16px;
+      border-radius: 10px;
+      color: white;
+      border: none;
+      font-size: 1.5rem;
+      font-weight: 600;
+      cursor: pointer;
+
+      &:hover {
+        color: #ff6f00;
+        text-shadow: rgba(241, 116, 70, 0.9) 0px 0px 20px;
+      }
+    }
+
+    & #logo {
+      background-image: url(images/logo.png);
+      width: 120px;
+      height: 125px;
+      background-size: contain;
+      background-position: center;
+      filter: invert(45%) sepia(65%) saturate(1948%) hue-rotate(359deg) brightness(101%) contrast(108%);
+    }
+  }
+
+  &::after{
+    content: "";
+    display: block;
+    padding-block-start: 30px;
+    width:100%;
+    margin: auto;
+    border-bottom: 1px solid #ff6f00  ;
+  }
+}
+
+
+#content {
+
+  margin: 80px 0px;
+
+  & #hero-image {
+    position: relative;
+    margin-inline-start: 10%;
+
+    background-image: url(./images/hero-4.png);
+    width: 1100px;
+    height: 740px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 24px;
+  }
+
+  & #hero-container {
+    position: absolute;
+    right: -35%;
+    top: 5%;
+
+    background-color: var(--gray-10);
+    border-radius: 24px;
+    padding: 48px;
+    width: 45%;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    & .burger-icon {
+      background-image: url(images/hamburger.png);
+      margin: auto;
+      width: 100px;
+      height: 100px;
+      background-size: cover;
+      background-position: center;
+
+      animation: squiggly-anim 0.6s linear infinite;
+    }
+
+    & h2 {
+      font-family: 'PermanentMarker';
+      font-size: 2.25rem;
+      color: var(--orange-80);
+
+      +p {
+        line-height: 1.5;
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+/* Animations */
+
+@keyframes squiggly-anim {
+  0% {
+    filter: url("#squiggly-0");
+  }
+
+  25% {
+    filter: url("#squiggly-1");
+  }
+
+  50% {
+    filter: url("#squiggly-2");
+  }
+
+  75% {
+    filter: url("#squiggly-3");
+  }
+
+  100% {
+    filter: url("#squiggly-4");
+  }
+}
