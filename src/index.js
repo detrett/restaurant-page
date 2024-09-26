@@ -1,6 +1,7 @@
 import "./styles.css";
 import { loadHomeContent } from "./home";
 import { loadMenuContent } from "./menu";
+import { loadAboutContent } from "./about";
 
 console.log('%c Start of script', 'font-weight:900; color: darkgreen;')
 
@@ -12,7 +13,7 @@ function emptyContent() {
     }
 }
 
-/* loadHomeContent(); */
+loadHomeContent();
 
 // HOME CONTENT
 const homeBtn = document.getElementById('home');
@@ -26,5 +27,12 @@ const menuBtn = document.getElementById('menu');
 menuBtn.addEventListener('click', () => {
     emptyContent();
     loadMenuContent();
+})
+
+// ABOUT CONTENT
+const aboutBtn = document.getElementById('about');
+aboutBtn.addEventListener('click', () => {
+    emptyContent();
+    loadAboutContent();
 })
 
