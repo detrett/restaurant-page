@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Page | A Webpack Project</title>
+<script defer src="main.js"></script></head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <button id="home">HOME</button>
+                </li>
+                <li>
+                    <button id="menu">MENU</button>
+                </li>
+                <li>
+                    <a href="">
+                        <div id=logo></div>
+                    </a>
+                </li>
+                <li>
+                    <button id="about">ABOUT</button>
+                </li>
+                <li>
+                    <a href="https://github.com/detrett/restaurant-page" target="_blank">
+                        <button id="github">GITHUB
+                            <img src="2d54af59eff89f1fd1a4.svg" class="nw-icon" alt="">
+                        </button>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="content">
+
+    </div>
+
+    <svg style="display:none;">
+        <defs>
+            <filter id="squiggly-0">
+                <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="0" />
+                <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="6" />
+            </filter>
+            <filter id="squiggly-1">
+                <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="1" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" />
+            </filter>
+
+            <filter id="squiggly-2">
+                <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="2" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
+            </filter>
+            <filter id="squiggly-3">
+                <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="3" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" />
+            </filter>
+
+            <filter id="squiggly-4">
+                <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="4" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
+            </filter>
+        </defs>
+    </svg>
+</body>
+
+</html>
